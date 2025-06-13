@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BAZAM | Aplikasi Penjualan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header><nav>
+    <div class="logo">BAZAMcollection</div>
+  </nav><h1 class="main-title">BAZAMcollection - Aplikasi Penjualan & Stok</h1></header>
+  <main class="container">
+    <div class="card">
+      <h2>Tambah Barang</h2>
+      <input type="text" id="namaBarang" placeholder="Nama Barang" />
+      <input type="number" id="stokBarang" placeholder="Stok Awal" />
+      <input type="number" id="hargaJual" placeholder="Harga Jual (Rp)" />
+      <button onclick="tambahBarang()">Tambah</button>
+    </div>
+
+    <div class="card">
+      <h2>Penjualan</h2>
+      <select id="selectBarang"></select>
+      <input type="number" id="jumlahJual" placeholder="Jumlah Terjual" />
+      <div id="totalHarga" class="total-harga"></div>
+      <button onclick="jualBarang()">Jual</button>
+    </div>
+
+    <div class="card">
+      <h2>Stok Barang</h2>
+      <table>
+        <thead><tr><th>Nama</th><th>Stok</th><th>Harga</th></tr></thead>
+        <tbody id="tabelStok"></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Nota Terakhir</h2>
+      <div id="nota" class="nota"></div>
+      <button onclick="window.print()">Cetak Nota</button>
+    </div>
+
+    <button class="reset-btn" onclick="resetData()">🔄 Reset Semua Data</button>
+    <div class="card">
+      <h2>Laporan Penjualan</h2>
+      <table>
+        <thead><tr><th>Tanggal</th><th>Barang</th><th>Jumlah</th><th>Harga</th><th>Total</th></tr></thead>
+        <tbody id="laporan"></tbody>
+      </table>
+      <div id="totalOmzet" class="total-omzet"></div>
+      <button onclick="cetakLaporan()">Cetak Laporan</button>
+    </div>
+    <div id="notifikasi" class="notif"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
