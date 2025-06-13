@@ -1,0 +1,2 @@
+# stcok
+data barang
